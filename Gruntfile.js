@@ -317,7 +317,7 @@ module.exports = function (grunt) {
     buildcontrol: {
       dist: {
         options: {
-          remote: '../',
+          remote: 'git@github.com:speed-of-light/speed-of-light.github.io.git',
           branch: 'master',
           commit: true,
           push: true
