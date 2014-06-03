@@ -10,6 +10,8 @@
 //   fonts: fonts
 
 module.exports = function (grunt) {
+  // auto grunt.loadNpmTasks
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
   // Show elapsed time after tasks run
   require('time-grunt')(grunt);
   // Load all Grunt tasks
