@@ -314,7 +314,7 @@ module.exports = function(grunt) {
         options: {
           siteType: "url",
           site: "http://localhost:9000",
-          savePath: "<%= yeoman.app %>/img/snapshots/shot_<%= grunt.template.today('yy_mm_dd') %>.png",
+          savePath: "<%= yeoman.app %>/img/snapshots/shot_<%= grunt.template.today('yy_mm_dd_TT') %>.png",
           windowSize: {
             width: 1024,
             height: 768
