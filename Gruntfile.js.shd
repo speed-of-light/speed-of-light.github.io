@@ -11,22 +11,17 @@
 #   images: img
 #   fonts: fonts
 module.exports = (grunt) ->
-
   # auto grunt.loadNpmTasks
   require("matchdep").filterDev("grunt-*").forEach grunt.loadNpmTasks
-
   # Show elapsed time after tasks run
   require("time-grunt") grunt
-
   # Load all Grunt tasks
   require("load-grunt-tasks") grunt
   grunt.initConfig
-
     # Configurable paths
     yeoman:
       app: "app"
       dist: "dist"
-
     watch:
       compass:
         files: ["<%= yeoman.app %>/_sass/**/*.{scss,sass}"]
@@ -67,7 +62,6 @@ module.exports = (grunt) ->
           "{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js"
           "<%= yeoman.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}"
         ]
-
     connect:
       options:
         port: 9000
@@ -98,7 +92,6 @@ module.exports = (grunt) ->
             "test"
             "<%= yeoman.app %>"
           ]
-
     clean:
       dist:
         files: [
@@ -117,7 +110,6 @@ module.exports = (grunt) ->
         ".tmp"
         ".jekyll"
       ]
-
     compass:
       options:
 
@@ -142,7 +134,6 @@ module.exports = (grunt) ->
         options:
           debugInfo: true
           generatedImagesDir: ".tmp/img/generated"
-
     autoprefixer:
       options:
         browsers: ["last 2 versions"]
@@ -162,7 +153,6 @@ module.exports = (grunt) ->
           src: "**/*.css"
           dest: ".tmp/css"
         ]
-
     coffee:
       dist:
         files: [
@@ -181,7 +171,6 @@ module.exports = (grunt) ->
           dest: ".tmp/spec"
           ext: ".js"
         ]
-
     jekyll:
       options:
         bundleExec: true
@@ -200,20 +189,17 @@ module.exports = (grunt) ->
       check:
         options:
           doctor: true
-
     useminPrepare:
       options:
         dest: "<%= yeoman.dist %>"
 
       html: "<%= yeoman.dist %>/index.html"
-
     usemin:
       options:
         assetsDirs: "<%= yeoman.dist %>"
 
       html: ["<%= yeoman.dist %>/**/*.html"]
       css: ["<%= yeoman.dist %>/css/**/*.css"]
-
     htmlmin:
       dist:
         options:
@@ -221,27 +207,21 @@ module.exports = (grunt) ->
           collapseBooleanAttributes: true
           removeAttributeQuotes: true
           removeRedundantAttributes: true
-
         files: [
           expand: true
           cwd: "<%= yeoman.dist %>"
           src: "**/*.html"
           dest: "<%= yeoman.dist %>"
         ]
-
-
     # Usemin adds files to concat
     concat: {}
-
     # Usemin adds files to uglify
     uglify: {}
-
     # Usemin adds files to cssmin
     cssmin:
       dist:
         options:
           check: "gzip"
-
     imagemin:
       dist:
         options:
@@ -253,7 +233,6 @@ module.exports = (grunt) ->
           src: "**/*.{jpg,jpeg,png}"
           dest: "<%= yeoman.dist %>"
         ]
-
     svgmin:
       dist:
         files: [
@@ -262,7 +241,6 @@ module.exports = (grunt) ->
           src: "**/*.svg"
           dest: "<%= yeoman.dist %>"
         ]
-
     copy:
       dist:
         files: [
@@ -298,7 +276,6 @@ module.exports = (grunt) ->
           src: "**/*.css"
           dest: ".tmp/css"
         ]
-
     filerev:
       options:
         length: 4
@@ -310,7 +287,6 @@ module.exports = (grunt) ->
           "<%= yeoman.dist %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}"
           "<%= yeoman.dist %>/fonts/**/*.{eot*,otf,svg,ttf,woff}"
         ]]
-
     buildcontrol:
       dist:
         options:
@@ -318,14 +294,12 @@ module.exports = (grunt) ->
           branch: "master"
           commit: true
           push: true
-
     coffeelint:
       options:
         max_line_length:
           level: "ignore"
 
       check: ["<%= yeoman.app %>/_src/*.coffee"]
-
     jshint:
       options:
         jshintrc: ".jshintrc"
@@ -336,7 +310,6 @@ module.exports = (grunt) ->
         "<%= yeoman.app %>/js/**/*.js"
         "test/spec/**/*.js"
       ]
-
     csslint:
       options:
         csslintrc: ".csslintrc"
@@ -346,7 +319,6 @@ module.exports = (grunt) ->
           "<%= yeoman.app %>/css/**/*.css"
           "<%= yeoman.app %>/_sass/**/*.scss"
         ]
-
     concurrent:
       server: [
         "compass:server"
@@ -359,8 +331,6 @@ module.exports = (grunt) ->
         "coffee:dist"
         "copy:dist"
       ]
-
-
   # Define Tasks
   grunt.registerTask "serve", (target) ->
     if target is "dist"
@@ -376,16 +346,12 @@ module.exports = (grunt) ->
       "watch"
     ]
     return
-
   grunt.registerTask "server", ->
     grunt.log.warn "The `server` task has been deprecated. Use `grunt serve` to start a server."
     grunt.task.run ["serve"]
     return
-
-
   # No real tests yet. Add your own.
   grunt.registerTask "test", []
-
   #   'clean:server',
   #   'concurrent:test',
   #   'connect:test'
