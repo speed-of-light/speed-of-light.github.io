@@ -308,6 +308,23 @@ module.exports = function(grunt) {
     concurrent: {
       server: ["compass:server", "coffee:dist", "copy:stageCss", "jekyll:server"],
       dist: ["compass:dist", "coffee:dist", "copy:dist"]
+    },
+    webshot: {
+      homepage: {
+        options: {
+          siteType: "url",
+          site: "http://localhost:9000",
+          savePath: "<%= yeoman.app %>/img/snapshots/shot_<%= grunt.template.today('yy_mm_dd') %>.png",
+          windowSize: {
+            width: 1024,
+            height: 768
+          },
+          shotSize: {
+            width: 800,
+            height: 600
+          }
+        }
+      }
     }
   });
   grunt.registerTask("serve", function(target) {
@@ -322,7 +339,7 @@ module.exports = function(grunt) {
   });
   grunt.registerTask("test", []);
   grunt.registerTask("check", ["clean:server", "jekyll:check", "compass:server", "coffeelint:check", "coffee:dist", "jshint:all", "csslint:check"]);
-  grunt.registerTask("build", ["clean", "jekyll:dist", "concurrent:dist", "useminPrepare", "concat", "autoprefixer:dist", "cssmin", "uglify", "imagemin", "svgmin", "filerev", "usemin", "htmlmin"]);
+  grunt.registerTask("build", ["clean", "jekyll:dist", "concurrent:dist", "webshot:homepage", "useminPrepare", "concat", "autoprefixer:dist", "cssmin", "uglify", "imagemin", "svgmin", "filerev", "usemin", "htmlmin"]);
   grunt.registerTask("deploy", ["check", "test", "build", "buildcontrol"]);
   grunt.registerTask("default", ["check", "test", "build"]);
 };

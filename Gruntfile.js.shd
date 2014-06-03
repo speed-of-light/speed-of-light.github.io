@@ -1,6 +1,6 @@
 ## coffee -csb
 # vim: ft=coffee
-# Generated on 2014-06-01 using generator-jekyllrb 1.2.1
+# generated on 2014-06-01 using generator-jekyllrb 1.2.1
 "use strict"
 
 # Directory reference:
@@ -304,7 +304,6 @@ module.exports = (grunt) ->
       options:
         jshintrc: ".jshintrc"
         reporter: require("jshint-stylish")
-
       all: [
         "Gruntfile.js"
         "<%= yeoman.app %>/js/**/*.js"
@@ -313,7 +312,6 @@ module.exports = (grunt) ->
     csslint:
       options:
         csslintrc: ".csslintrc"
-
       check:
         src: [
           "<%= yeoman.app %>/css/**/*.css"
@@ -331,6 +329,18 @@ module.exports = (grunt) ->
         "coffee:dist"
         "copy:dist"
       ]
+    webshot:
+      homepage:
+        options:
+          siteType: "url"  # url, file or html
+          site: "http://localhost:9000"
+          savePath: "<%= yeoman.app %>/img/snapshots/shot_<%= grunt.template.today('yy_mm_dd') %>.png"
+          windowSize:
+            width: 1024
+            height: 768
+          shotSize:
+            width: 800
+            height: 600 # 'all'
   # Define Tasks
   grunt.registerTask "serve", (target) ->
     if target is "dist"
@@ -366,10 +376,10 @@ module.exports = (grunt) ->
   ]
   grunt.registerTask "build", [
     "clean"
-
     # Jekyll cleans files from the target directory, so must run first
     "jekyll:dist"
     "concurrent:dist"
+    "webshot:homepage"
     "useminPrepare"
     "concat"
     "autoprefixer:dist"
