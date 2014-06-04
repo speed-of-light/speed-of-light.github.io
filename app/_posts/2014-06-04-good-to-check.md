@@ -13,3 +13,12 @@ https://dribbble.com/
 ## CodeVisuality
 
 http://codevisually.com/
+
+## Google Fonts
+
+http://www.google.com/fonts/
+
+
+## Kuler
+
+https://kuler.adobe.com/explore/most-popular/?time=month
