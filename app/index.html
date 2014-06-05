@@ -4,8 +4,12 @@ title: Speed of light
 ---
 
 <section class="home posts">
-  <h1>Blog Posts Cool</h1>
+  <h3>Blog Posts</h3>
   {% for post in site.posts %}
-    <article><time>{{ post.date | date_to_string }}</time> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></article>
+    <article>
+      <time>{{ post.date | date_to_string }}</time>
+      &raquo;
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </article>
   {% endfor %}
 </section>
