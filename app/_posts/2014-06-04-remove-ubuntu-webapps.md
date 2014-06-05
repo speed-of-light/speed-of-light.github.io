@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "remove_ubuntu_webapps"
+title: "Remove Ubuntu webapps"
 date: "Wed Jun 04 15:30:21 +0800 2014"
-category: system ubuntu
+categories: system ubuntu
 tags: ubuntu performance tweak
 ---
 
