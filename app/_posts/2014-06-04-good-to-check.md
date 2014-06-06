@@ -6,18 +6,17 @@ categories: site toolset
 tags: design web
 ---
 
-## Dribble
-https://dribbble.com/
+# Styling
+- [Dribble](https://dribbble.com/)
+- [Code Visuality](http://codevisually.com/)
 
-## CodeVisuality
-http://codevisually.com/
+# Coloring
+- [Kuler](https://kuler.adobe.com/explore/most-popular/?time=month)
+- [Colour Lovers](http://www.colourlovers.com/)
 
-## Google Fonts
-http://www.google.com/fonts/
+# Resources
+- [Google Fonts](http://www.google.com/fonts/)
 
-
-## Kuler
-https://kuler.adobe.com/explore/most-popular/?time=month
-
-## Learn stuff
-http://tutorialzine.com/
+# Learn stuff
+- [Tutorialzine](http://tutorialzine.com/)
+- [Coursera NLP](https://class.coursera.org/nlp/lecture)
