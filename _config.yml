@@ -3,7 +3,7 @@
 # 2. config.build.yml
 # 3. config.yml
 
-name: Speed Of Light
+name: 'Speed Of Light'
 description: Moving as speed of light.
 author:
   name: speed-of-light
@@ -25,18 +25,14 @@ paginate: 10
 paginate_path: 'page:num'
 
 # Markdown library
+markdown_ext: foo
 markdown: kramdown
-#   auto_ids: true
-#   footnote_nr: 1
-#   entity_output: as_char
-#   toc_levels: 1..6
-#   use_coderay: false
-#   coderay:
-#     coderay_wrap: div
-#     coderay_line_numbers: inline
-#     coderay_line_numbers_start: 1
-#     coderay_tab_width: 4
-#     coderay_bold_every: 10
-#     coderay_css: style
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+  input: GFM  # use Github flavor markdown
 
 pygments: true
