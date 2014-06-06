@@ -45,7 +45,10 @@ module.exports = function(grunt) {
       },
       livereload: {
         options: {
-          open: true,
+          open: {
+            target: "http://<%= connect.options.hostname %>:<%= connect.options.port %>",
+            appName: "chromium-browser"
+          },
           base: [".tmp", ".jekyll", "<%= yeoman.app %>"]
         }
       },
