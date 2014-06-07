@@ -1,8 +1,16 @@
 <div class="container">
-  <header> <h1>Speed of Light</h1> </header>
+  <header> <h1>{{ page.title }}</h1> </header>
+
   <div class="nine columns">
     {{ content }}
   </div>
   <div class="three columns">
+  </div>
+
+  <div class="twelve columns">
+  <footer>
+    {{ site.footer.links.github }}
+    <small>© Copyright {{ site.time | date: "%Y" }} {{ site.author.name }}</small>
+  </footer>
   </div>
 </div>

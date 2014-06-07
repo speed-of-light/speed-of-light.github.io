@@ -4,10 +4,10 @@
 # 3. config.yml
 
 name: 'Speed Of Light'
-description: Moving as speed of light.
+description: 'Moving as speed of light.'
 author:
-  name: speed-of-light
-  email: speed.of.lightt@gmail.com
+  name: 'speed-of-light'
+  email: 'speed.of.lightt@gmail.com'
 
 # Grunt handles images and assets.
 exclude: ['img', 'css', 'js', 'fonts', 'node_modules', 'scss',
@@ -36,3 +36,8 @@ kramdown:
   # input: GFM  # use Github flavor markdown
 
 pygments: true
+
+footer:
+  links:
+    github: 'coo'
+    twitter: 'test'
