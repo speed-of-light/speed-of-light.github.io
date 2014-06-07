@@ -378,7 +378,6 @@ module.exports = (grunt) ->
     # Jekyll cleans files from the target directory, so must run first
     "jekyll:dist"
     "concurrent:dist"
-    "webshot:homepage"
     "useminPrepare"
     "concat"
     "autoprefixer:dist"
@@ -390,7 +389,14 @@ module.exports = (grunt) ->
     "usemin"
     "htmlmin"
   ]
+  grunt.registerTask "fake_deploy", [
+    "webshot:homepage"
+    "check"
+    "test"
+    "build"
+  ]
   grunt.registerTask "deploy", [
+    "webshot:homepage"
     "check"
     "test"
     "build"
