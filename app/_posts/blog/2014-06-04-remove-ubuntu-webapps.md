@@ -2,8 +2,12 @@
 layout: post
 title: "Remove Ubuntu webapps"
 date: "Wed Jun 04 15:30:21 +0800 2014"
-categories: system ubuntu
-tags: ubuntu performance tweak
+categories:
+  - blog
+tags:
+  - system
+  - ubuntu
+  - performance
 ---
 
 Recently I have found that the os is slowing down.
