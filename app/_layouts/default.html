@@ -27,23 +27,12 @@
     <!-- Replace with a custom modernizer build for production -->
     <script src="/_bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
-
   </head>
-  <body>
-    <!--[if lt IE 8]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <div class="container">
-      <header> <h1>Speed of Light</h1> </header>
-      <div class="nine columns">
-        {{ content }}
-      </div>
-      <div class="three columns">
-      </div>
-    </div>
 
+  <body>
+    {% include browsehappy.html %}
+    {% include container.html %}
     {% include scripts.html %}
     {% include googleanalytics.html %}
-
   </body>
 </html>
