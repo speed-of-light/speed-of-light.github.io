@@ -45,7 +45,10 @@ module.exports = function(grunt) {
       },
       livereload: {
         options: {
-          open: true,
+          open: {
+            target: "http://<%= connect.options.hostname %>:<%= connect.options.port %>",
+            appName: "chromium-browser"
+          },
           base: [".tmp", ".jekyll", "<%= yeoman.app %>"]
         }
       },
@@ -339,7 +342,8 @@ module.exports = function(grunt) {
   });
   grunt.registerTask("test", []);
   grunt.registerTask("check", ["clean:server", "jekyll:check", "compass:server", "coffeelint:check", "coffee:dist", "jshint:all", "csslint:check"]);
-  grunt.registerTask("build", ["clean", "jekyll:dist", "concurrent:dist", "webshot:homepage", "useminPrepare", "concat", "autoprefixer:dist", "cssmin", "uglify", "imagemin", "svgmin", "filerev", "usemin", "htmlmin"]);
-  grunt.registerTask("deploy", ["check", "test", "build", "buildcontrol"]);
+  grunt.registerTask("build", ["clean", "jekyll:dist", "concurrent:dist", "useminPrepare", "concat", "autoprefixer:dist", "cssmin", "uglify", "imagemin", "svgmin", "filerev", "usemin", "htmlmin"]);
+  grunt.registerTask("fake_deploy", ["webshot:homepage", "check", "test", "build"]);
+  grunt.registerTask("deploy", ["webshot:homepage", "check", "test", "build", "buildcontrol"]);
   grunt.registerTask("default", ["check", "test", "build"]);
 };
