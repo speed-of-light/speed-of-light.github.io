@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem "jekyll", "~>1.4.0"
+gem "jekyll", "~>2.0.3"
 gem "kramdown"
 gem "pygments.rb", "~> 0.5.4"
 gem "typogruby"
