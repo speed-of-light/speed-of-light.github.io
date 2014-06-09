@@ -9,7 +9,7 @@ tags:
   - language
 ---
 
-> http://on.ted.com/j0HQm
+> [TED http://on.ted.com/j0HQm](http://on.ted.com/j0HQm)
 
 數學中常用`x`來代表未知數,
 講者在學阿拉伯文的過程中發現阿拉伯文是非常有邏輯的語言,
