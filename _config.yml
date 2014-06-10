@@ -24,7 +24,7 @@ paginate: 10
 paginate_path: 'page:num'
 
 # Markdown library
-pygments: true
+highlighter: pygments
 markdown_ext: foo
 markdown: kramdown
 kramdown:

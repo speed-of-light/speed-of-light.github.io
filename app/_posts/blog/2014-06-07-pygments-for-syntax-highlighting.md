@@ -4,6 +4,7 @@ title: "Pygments for syntax highlighting"
 date: "Sat Jun 07 01:46:54 +0800 2014"
 description: "The problems I met during add a syntax highlighter to jekyll"
 categories:
+  - en
   - blog
 tags:
   - lib

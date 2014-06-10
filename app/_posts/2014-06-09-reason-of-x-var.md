@@ -2,7 +2,9 @@
 layout: post
 title: "變數用 x 的由來"
 date: "Mon Jun 09 23:27:32 +0800 2014"
-category: notes
+categories:
+  - zh
+  - notes
 tags:
   - tedx
   - kepu

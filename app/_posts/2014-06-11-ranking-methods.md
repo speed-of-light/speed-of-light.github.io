@@ -3,6 +3,7 @@ layout: post
 title: "Ranking methods"
 date: "Wed Jun 11 00:45:27 +0800 2014"
 categories:
+  - en
   - research
   - computer science
 tags:

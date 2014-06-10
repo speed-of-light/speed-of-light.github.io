@@ -3,6 +3,7 @@ layout: post
 title: "Remove Ubuntu webapps"
 date: "Wed Jun 04 15:30:21 +0800 2014"
 categories:
+  - en
   - blog
 tags:
   - system
