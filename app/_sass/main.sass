@@ -4,6 +4,31 @@
 @import base/skeleton
 @import base/var
 
+html, body
+  height: 100%
+  width: 100%
+
+body
+  background-size: 100% 100%
+  background-repeat: no-repeat
+  background-image: url(../img/bkg.png)
+  min-height: 100%
+  display: table
+  position: absolute
+  .wrapper
+    display: table-cell
+    vertical-align: top
+    padding: 30px 0 0
+
+.container
+  background: rgba(167, 192, 192, .27)
+  border: 2px solid #4de
+  border-radius: 10px
+  padding: 10px 15px 10px
+  margin: 0 auto
+  a
+    color: white
+
 // custom part
 @import header
 @import post
