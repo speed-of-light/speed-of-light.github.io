@@ -13,7 +13,6 @@ author:
 exclude: ['img', 'css', 'js', 'fonts', 'node_modules', 'scss',
           '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp',
           '**.svg', '**.ico']
-
 include: ['.htaccess']
 
 # _config.build.yml sets future and show_drafts to false on `grunt build`
@@ -25,6 +24,7 @@ paginate: 10
 paginate_path: 'page:num'
 
 # Markdown library
+highlighter: pygments
 markdown_ext: foo
 markdown: kramdown
 kramdown:
@@ -35,8 +35,16 @@ kramdown:
   enable_coderay: false
   # input: GFM  # use Github flavor markdown
 
-pygments: true
+# collections
+collection:
+  - 'sandboxes'
+  - 'tool'
+collections:
+  sandboxes:
+    title: 'Sandbox'
+    output: true
 
+# settings
 footer:
   links:
     github: 'coo'

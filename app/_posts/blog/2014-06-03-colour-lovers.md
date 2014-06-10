@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Colour-lovers"
+title: Colour-lovers
 date: "Tue Jun 03 00:13:45 +0800 2014"
 categories:
+  - en
   - blog
 tags:
   - recommendation

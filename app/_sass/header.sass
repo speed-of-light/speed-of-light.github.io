@@ -1,0 +1,36 @@
+@import "base/var"
+$sb-line-height: $h1-font-size*1.2
+$sb-font-size: $h1-font-size*.8
+
+
+.header
+  a
+    text-decoration: none
+  .desc
+    position: relative
+    top: -$h1-font-size*2/3
+    left: $h1-font-size*0.1
+    &:before
+      content: ' > '
+      margin-left: $h1-line-height
+    &:after
+      content: ' >> '
+
+
+.header.sandbox
+  h1
+    line-height: $sb-line-height
+    font-size: $sb-font-size
+    margin: 0 0 2px
+    &:after
+      content: 'Sandbox'
+      color: #868
+      font-size: $sb-font-size*0.6
+      line-height: $sb-font-size*0.6
+      position: absolute
+      top: $sb-font-size*.3
+  .desc
+    top: -$h1-font-size*2/5
+    left: 0
+    &:before
+      margin-left: $h1-line-height*3/5

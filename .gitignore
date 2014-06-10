@@ -1,4 +1,4 @@
-app/img/snapshots/**/*
+#app/img/snapshots/**/*
 # .gitignore for Yeoman-Jekyll projects
 
 # Ignore hidden folders #

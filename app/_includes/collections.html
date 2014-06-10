@@ -1,0 +1,9 @@
+{% for col in site.collection %}
+  {% assign item = site.collections[col] %}
+  <h3>{{ item.title }}</h3>
+  {% for doc in item.docs %}
+    <article>
+      <a href="{{ doc.url }}">{{ doc.title }}</a>
+    </article>
+  {% endfor %}
+{% endfor %}
