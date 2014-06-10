@@ -3,8 +3,18 @@
 $p-margin: $p-font-size/2 $p-font-size/3 $p-font-size
 $code-color: #f2f
 $code-background: #eee
+$text-color: #ddc
 
-.post
+.post, .posts
+  a
+    text-decoration: none
+    transition: color .8s ease
+    &:hover
+      transition: color .8s ease
+      color: #f6fd84
+      font-weight: bold
+  *
+    color: $text-color
   img[alt=palette]
     width: 200px
   h1
