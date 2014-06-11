@@ -19,3 +19,7 @@ a_python_function('good')
 # Gist
 
 {% gist speed-of-light/e1fd7c5c888f19db4bbf Syntax.liquid %}
+
+# References
+
+- [Plugins](http://www.jekyll-plugins.com/plugins?utf8=%E2%9C%93&query=local)
