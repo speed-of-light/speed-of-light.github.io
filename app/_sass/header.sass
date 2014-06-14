@@ -1,9 +1,15 @@
 @import "base/var"
 $sb-line-height: $h1-font-size*1.2
 $sb-font-size: $h1-font-size*.8
+$hh1-color: invert($bg-color)
+$hhd-color: darken($hh1-color, 10)
 
 
 .header
+  h1
+    color: $hh1-color
+  .desc
+    color: $hhd-color
   a
     text-decoration: none
   .desc
