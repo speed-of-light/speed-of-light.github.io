@@ -18,7 +18,7 @@ body
   position: absolute
   padding-bottom: $footer-height
   .wrapper
-    display: table-cell
+    display: block
     vertical-align: top
     padding: 30px 0 0
 
@@ -31,6 +31,15 @@ body
   a
     color: white
 
+.footer
+  .contents
+    display: block
+    width: 100%
+    color: white
+  &.fixed
+    position: fixed
+  &.bottom
+    bottom: 0px
 // custom part
 @import header
 @import post
