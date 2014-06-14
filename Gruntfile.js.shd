@@ -82,7 +82,6 @@ module.exports = (grunt) ->
         options:
           open: true
           base: ["<%= yeoman.dist %>"]
-
       test:
         options:
           base: [
@@ -192,8 +191,10 @@ module.exports = (grunt) ->
       html: "<%= yeoman.dist %>/index.html"
     usemin:
       options:
-        assetsDirs: "<%= yeoman.dist %>"
-
+        assetsDirs: [
+          "<%= yeoman.dist %>"
+          "<%= yeoman.dist %>/img"
+        ]
       html: ["<%= yeoman.dist %>/**/*.html"]
       css: ["<%= yeoman.dist %>/css/**/*.css"]
     htmlmin:

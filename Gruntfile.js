@@ -180,7 +180,7 @@ module.exports = function(grunt) {
     },
     usemin: {
       options: {
-        assetsDirs: "<%= yeoman.dist %>"
+        assetsDirs: ["<%= yeoman.dist %>", "<%= yeoman.dist %>/img"]
       },
       html: ["<%= yeoman.dist %>/**/*.html"],
       css: ["<%= yeoman.dist %>/css/**/*.css"]
