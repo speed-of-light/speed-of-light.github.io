@@ -3,6 +3,7 @@ layout: post
 title: "Unity disappeared!"
 date: "Sun Jun 15 17:25:00 +0800 2014"
 categories:
+  - en
   - ubuntu
   - accidental-issue
 tags:

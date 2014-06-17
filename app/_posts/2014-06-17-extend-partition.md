@@ -2,7 +2,8 @@
 layout: post
 title: "Extend Partition"
 date: "Tue Jun 17 20:56:37 +0800 2014"
-category:
+categories:
+  - en
   - system
 tags:
   - ubuntu
